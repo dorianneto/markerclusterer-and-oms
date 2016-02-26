@@ -1,0 +1,30 @@
+{
+  "name": "markerclusterer-and-oms",
+  "homepage": "https://github.com/dorianneto/markerclusterer-and-oms",
+  "description": "Máxima organização de visualização dos marcadores com MarkerClusterer e OverlappingMarkerSpiderfier(OMS)",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "gmaps",
+    "google",
+    "maps",
+    "MarkerClusterer",
+    "OverlappingMarkerSpiderfier",
+    "OMS"
+  ],
+  "authors": [
+    "Dorian Neto"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "markerclustererplus": "^2.1.4",
+    "OverlappingMarkerSpiderfier": "*"
+  }
+}
