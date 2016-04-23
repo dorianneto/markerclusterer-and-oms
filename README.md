@@ -1,8 +1,15 @@
-# MarkerClusterer e OverlappingMarkerSpiderfier (OMS)
+# Agrupador de marcadores + Visualização de marcadores em teia no Google maps
 
-Pequeno protótipo utilizando 2 plugins focados em organização dos marcadores no mapa. MarkerClusterer agrupa várias marcadores em uma determinada área e o OMS cria uma teia para melhor acesso a marcadores que possuem a mesma localidade (latitude/longitude) ou que estão bastante próximos no mapa.
+Protótipo criado com a finalidade de divulgar a solução que encontrei para agrupar vários marcadores de acordo com o zoom do mapa e exibir vários marcadores caso os mesmo estejam na mesma localização (lat/lng) ou em localização próxima em formato de teia.
 
-## Documentação
+## Libs
 
-* MarkerClusterer(http://google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.1/)
-* OMS(https://github.com/jawj/OverlappingMarkerSpiderfier)
+### MarkerClusterer (agrupador)
+([documentação](http://google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.1/))
+
+![MarkerClusterer](https://github.com/dorianneto/markerclusterer-and-oms/raw/master/assets/img/marker-clusterer.png)
+
+### OverlappingMarkerSpiderfier (visualização de marcadores em teia)
+([documentação](https://github.com/jawj/OverlappingMarkerSpiderfier))
+
+![OverlappingMarkerSpiderfier](https://github.com/dorianneto/markerclusterer-and-oms/raw/master/assets/img/oms.png)
