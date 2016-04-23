@@ -13,57 +13,15 @@
     <script src="http://maps.googleapis.com/maps/api/js"></script>
     <script src="bower_components/markerclustererplus/dist/markerclusterer.min.js"></script>
     <script src="bower_components/OverlappingMarkerSpiderfier/dist/oms.min.js"></script>
-    <script src="assets/js/data.json"></script>
+    <script src="assets/js/map.js"></script>
 
     <script>
-    function initialize() {
-        var center = new google.maps.LatLng(-12.235004, -47.92527999999999);
-
-        var map = new google.maps.Map(document.getElementById('map_canvas'), {
-            zoom: 3,
-            center: center,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-        });
-
-        // Teia de marcadores
-        var oms = new OverlappingMarkerSpiderfier(map);
-
-        // Adição dos marcadores no mapa a partir do arquivo JSON
-        var markers = [];
-        for (var i = 0; i < data.length; i++) {
-            var dataPhoto = data[i];
-
-            var latLng = new google.maps.LatLng(dataPhoto.latitude, dataPhoto.longitude);
-            var title = dataPhoto.title;
-            var desc = dataPhoto.description;
-
-            var marker = new google.maps.Marker({
-                position: latLng,
-                title: title,
-                content: desc
-            });
-            markers.push(marker);
-            oms.addMarker(marker); // Informando para a classe que cria a teia quais marcadores foram adicionados ao mapa.
+        window.onload = function() {
+            map.load();
         }
-
-        var info_window = new google.maps.InfoWindow();
-        oms.addListener('click', function(marker, event) {
-            var content = "<h1>" + marker.title + "</h1><p>" + marker.content + "</p>";
-            info_window.setContent(content);
-            info_window.open(map, marker);
-        });
-
-        oms.addListener('spiderfy', function(markers) {
-            info_window.close();
-        });
-
-        // Agrupador de marcadores
-        var mcOptions = {maxZoom: 16};
-        var markerCluster = new MarkerClusterer(map, markers, mcOptions);
-    }
     </script>
 </head>
-<body onload="initialize()">
+<body>
     <div id="map_canvas"></div>
 </body>
 </html>
